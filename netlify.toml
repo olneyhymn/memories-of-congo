@@ -1,7 +1,7 @@
 [build]
-publish = "site"
-command = "echo 1"
+  publish = "site"
+  command = "echo 1"
 
 [[redirects]]
-from = "/"
-to = "/MemoriesOfCongo.html"
+  from = "/"
+  to = "/MemoriesOfCongo.html"
