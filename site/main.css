@@ -23,7 +23,19 @@ li {
 .bottom-images {
     display: flex;
     padding-top: 1em;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bottom-images a {
+    flex: 1 0 auto;
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .bottom-images a {
+        flex: 1 0 100%;
+    }
 }
 
 .previous-chapter {
@@ -51,6 +63,11 @@ li {
     padding: 20px;
     background-color: white;
     /* Or any other color */
+}
+
+.body-image {
+    max-width: 100%;
+    height: auto;
 }
 
 .bamboo {
@@ -89,4 +106,46 @@ li {
     .body-image {
         float: right;
     }
+
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 25px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
