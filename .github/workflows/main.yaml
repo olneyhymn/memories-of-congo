@@ -27,8 +27,9 @@ jobs:
         sudo apt-get install -y pandoc
 
     - name: Run ebook script
+      working-directory: site
       run: |
-        ./site/ebook.sh 
+        ./ebook.sh 
         
     - name: Upload artifact
       uses: actions/upload-artifact@v2
