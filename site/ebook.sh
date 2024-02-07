@@ -14,8 +14,6 @@ done
 
 pandoc -o book.epub --css epub.css --toc-depth 2 \
     metadata.txt \
-    CH0.md \
-    CH1.md \
     CH2.md \
     CH3.md \
     CH4.md \
