@@ -19,7 +19,6 @@ pandoc -o book.epub \
     -V lang=en \
     --epub-cover-image cover.png \
     --resource-path=. \
-    metadata.txt \
     CH0.md \
     CH1.md \
     CH2.md \
