@@ -37,7 +37,7 @@ directory = "./"  # Current directory; adjust as needed
 
 # Iterate over the files and process each
 for chapter in chapters_range:
-    file_name = f"ch{chapter}.htm"
+    file_name = f"CH{chapter}.htm"
     file_path = os.path.join(directory, file_name)
     clean_html_file(file_path)
     print(f"Cleaned {file_path}")
