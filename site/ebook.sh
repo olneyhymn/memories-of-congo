@@ -14,8 +14,7 @@ done
 
 pandoc -o book.epub \
     --css epub.css \
-    --toc-depth 2 \
-    -V lang=en \
+    --toc --toc-depth 2 \
     --epub-cover-image cover.png \
     --resource-path=. \
     --epub-metadata=metadata.xml \
