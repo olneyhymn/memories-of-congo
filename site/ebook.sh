@@ -12,8 +12,13 @@ for i in {0..10}; do
     pandoc -o CH$i.md CH$i.htm
 done
 
-pandoc -o book.epub --css epub.css --toc-depth 2 -V lang=en --epub-cover-image cover.png --resource-path=IMAGES \
-    metadata.txt \
+pandoc -o book.epub \
+    --css epub.css \
+    --toc-depth 2 \
+    -V lang=en \
+    --epub-cover-image cover.png \
+    --resource-path=. \
+    --epub-metadata=metadata.xml \
     CH0.md \
     CH1.md \
     CH2.md \
