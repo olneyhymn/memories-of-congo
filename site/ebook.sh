@@ -19,6 +19,8 @@ pandoc -o book.epub \
     -V lang=en \
     --epub-cover-image cover.png \
     --resource-path=. \
+    --metadata author="J. Hershey Longenecker" \
+    --metadata title="Memories of Congo" \
     CH0.md \
     CH1.md \
     CH2.md \
