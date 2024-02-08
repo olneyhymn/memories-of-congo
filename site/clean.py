@@ -37,14 +37,7 @@ directory = "./"  # Current directory; adjust as needed
 
 # Iterate over the files and process each
 for chapter in chapters_range:
-    file_name = (
-        f"ch{chapter}.html"
-        if os.path.exists(f"ch{chapter}.html")
-        else f"ch{chapter}.htm"
-    )
+    file_name = f"ch{chapter}.htm"
     file_path = os.path.join(directory, file_name)
-    if os.path.exists(file_path):
-        clean_html_file(file_path)
-        print(f"Cleaned {file_path}")
-    else:
-        print(f"File {file_path} not found. Skipping.")
+    clean_html_file(file_path)
+    print(f"Cleaned {file_path}")
