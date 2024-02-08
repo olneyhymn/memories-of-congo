@@ -1,8 +1,0 @@
----
-title:
-- type: main
-  text: Memories of Congo 
-creator:
-- role: author
-  text: J. Hershey Longenecker
----t 
