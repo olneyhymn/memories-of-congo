@@ -14,10 +14,12 @@ done
 
 pandoc -o book.epub \
     --css epub.css \
-    --toc --toc-depth 2 \
+    --toc \
+    --toc-depth 2 \
+    -V lang=en \
     --epub-cover-image cover.png \
     --resource-path=. \
-    --epub-metadata=metadata.xml \
+    metadata.txt \
     CH0.md \
     CH1.md \
     CH2.md \
