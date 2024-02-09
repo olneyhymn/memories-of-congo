@@ -7,6 +7,8 @@ function openModal(src) {
 
 
 var modal = document.getElementById("myModal");
+var img = document.getElementById("img01");
+
 
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
@@ -16,7 +18,7 @@ span.onclick = function () {
 
 
 window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target == modal || event.target == img) {
         modal.style.display = "none";
     }
 }
