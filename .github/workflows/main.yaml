@@ -28,7 +28,7 @@ jobs:
     - name: Install pandoc and LuaLaTeX
       run: |
         sudo apt-get update
-        sudo apt-get install -y pandoc texlive-xetex texlive-fonts-extra texlive-lmodern
+        sudo apt-get install -y pandoc texlive-xetex texlive-fonts-extra texlive-fonts-recommended
 
     - name: Run ebook script
       working-directory: site
