@@ -14,7 +14,7 @@ def clean_html_file(file_path):
             a_tag.insert_before(img)
             # Replace "IMAGES" with "Pictures" in the src attribute
             if img.has_attr("src"):
-                img["src"] = img["src"].replace("IMAGES/", "Pictures/")
+                img["src"] = img["src"].replace("IMAGES/", "pictures/")
         # Remove the <a> tag after reinserting the images
         a_tag.decompose()
 
