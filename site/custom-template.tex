@@ -4,6 +4,17 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{caption}
+\usepackage{adjustbox}
+\newcommand{\includeimage}[2][]{
+  \begin{figure}[H]
+    \centering
+    \adjustbox{max width=\textwidth, max height=\textheight}{
+      \includegraphics[width=\textwidth]{#2}
+    }
+    \caption{#1}
+  \end{figure}
+}
+
 \begin{document}
 $body$
 \end{document}
