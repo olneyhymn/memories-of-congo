@@ -38,11 +38,11 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: book
+        name: epub
         path: site/book.epub
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: book
+        name: pdf
         path: site/book.pdf
