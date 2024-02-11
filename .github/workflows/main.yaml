@@ -39,3 +39,9 @@ jobs:
       with:
         name: book
         path: site/book.epub
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: book
+        path: site/book.pdf
