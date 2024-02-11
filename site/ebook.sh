@@ -45,8 +45,8 @@ pandoc \
     CH8.md \
     CH9.md \
     CH10.md \
+    --template=custom-template.tex \
     -o book.pdf \
-    -V documentclass=scrbook \
     -V indent \
     -V subparagraph \
     -V fontfamily="libertine" \
