@@ -33,6 +33,10 @@ pandoc -o book.epub \
     CH9.md \
     CH10.md
 
+for file in *.md; do
+    sed -i -E 's/!\[\]\((IMAGES\/[^)]+)\)\{\.body-image\}/\\begin{figure}\\centering\\includegraphics[width=0.75\\textwidth]{\1}\\end{figure}/g' "$file"
+done
+
 pandoc \
     CH0.md \
     CH1.md \
