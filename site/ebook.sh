@@ -33,6 +33,34 @@ pandoc -o book.epub \
     CH9.md \
     CH10.md
 
+for file in *.md; do
+    sed -i -E 's/!\[\]\((IMAGES\/[^)]+)\)\{\.body-image\}/\\begin{figure}\\centering\\includegraphics[width=0.75\\textwidth]{\1}\\end{figure}/g' "$file"
+done
+
+pandoc \
+    CH0.md \
+    CH1.md \
+    CH2.md \
+    CH3.md \
+    CH4.md \
+    CH5.md \
+    CH6.md \
+    CH7.md \
+    CH8.md \
+    CH9.md \
+    CH10.md \
+    --template=custom-template.tex \
+    -f markdown-implicit_figures \
+    -o book.pdf \
+    -V indent \
+    -V subparagraph \
+    -V fontfamily="libertine" \
+    -V fontfamilyoptions="oldstyle,proportional" \
+    -V papersize=a5 \
+    --top-level-division=chapter \
+    --pdf-engine=lualatex \
+    --table-of-contents
+
 rm CH*.md
 
 git reset --hard HEAD
