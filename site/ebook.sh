@@ -46,6 +46,7 @@ pandoc \
     CH9.md \
     CH10.md \
     --template=custom-template.tex \
+    -f markdown-implicit_figures \
     -o book.pdf \
     -V indent \
     -V subparagraph \
