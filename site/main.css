@@ -43,20 +43,12 @@ h2 {
 
 p,
 li {
-    text-align: justify;
-    hyphens: auto;
+    text-align: left;
 }
 
-/* Justified text reads badly on narrow screens; switch to a ragged edge. */
 @media (max-width: 640px) {
     body {
         font-size: 1.075rem;
-    }
-
-    p,
-    li {
-        text-align: left;
-        hyphens: manual;
     }
 
     .wrapper {
