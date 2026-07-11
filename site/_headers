@@ -1,0 +1,6 @@
+# Always revalidate CSS/JS so stylesheet and script changes appear immediately
+# instead of being stuck behind a multi-hour browser cache.
+/main.css
+  Cache-Control: public, max-age=0, must-revalidate
+/main.js
+  Cache-Control: public, max-age=0, must-revalidate
