@@ -9,7 +9,7 @@ fi
 python clean.py
 
 for i in {0..10}; do
-    pandoc -o CH$i.md CH$i.htm
+    pandoc -o ch$i.md ch$i.html
 done
 
 pandoc -o book.epub \
@@ -21,18 +21,18 @@ pandoc -o book.epub \
     --resource-path=. \
     --metadata author="J. Hershey Longenecker" \
     --metadata title="Memories of Congo" \
-    CH0.md \
-    CH1.md \
-    CH2.md \
-    CH3.md \
-    CH4.md \
-    CH5.md \
-    CH6.md \
-    CH7.md \
-    CH8.md \
-    CH9.md \
-    CH10.md
+    ch0.md \
+    ch1.md \
+    ch2.md \
+    ch3.md \
+    ch4.md \
+    ch5.md \
+    ch6.md \
+    ch7.md \
+    ch8.md \
+    ch9.md \
+    ch10.md
 
-rm CH*.md
+rm ch*.md
 
 git reset --hard HEAD
